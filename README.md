@@ -3,7 +3,7 @@
 ## Project Overview
 Frost App is a data visualization tool built with Streamlit, designed to assist winemakers and agricultural professionals in assessing frost risks in France.
 
-By analyzing historical weather data (2018-2024), the application calculates the probability of frost events (temperatures dropping below 0°C) for specific geographical locations. It generates a "Typical Year" model, allowing users to visualize temperature evolution and frost frequency over a user-defined period (e.g., the critical budburst phase in spring).
+By analyzing historical weather data (2018-2024), the application calculates the probability of frost events (temperatures dropping below 0 C) for specific geographical locations. It generates a "Typical Year" model, allowing users to visualize temperature evolution and frost frequency over a user-defined period (e.g., the critical budburst phase in spring).
 
 ## Features
 - **City-Level Granularity:** Users can select specific communes in France to analyze local climate risks.
@@ -13,20 +13,6 @@ By analyzing historical weather data (2018-2024), the application calculates the
   - Average minimum daily temperature.
 - **Geospatial Visualization:** Interactive map locating the selected commune.
 - **Customizable Date Ranges:** Users can filter the analysis for specific observation windows (e.g., January 1st to April 30th).
-
-## Repository Structure
-
-/
-├── app.py                 # Main Streamlit application entry point
-├── preprocess.py          # Script to clean raw data and generate optimized databases
-├── data/                  # Directory containing raw and processed CSV files
-│   ├── df.csv             # Raw station data (2023 observations)
-│   ├── df0.csv            # Historical departmental weather data (2018-2025)
-│   ├── df1.csv            # Station metadata (Legacy)
-│   ├── df3.csv            # Station metadata (Legacy)
-│   ├── df4.csv            # Administrative data for French communes (Cities)
-│   ├── cities_db.csv      # Processed lookup file for city-to-department mapping
-│   └── frost_climate_db.csv # Processed statistical climate data
 
 
 ## Data Sources & Methodology
@@ -77,6 +63,10 @@ Launch the Streamlit interface:
 streamlit run app.py
 
 The application will open automatically in your default web browser at http://localhost:8501.
+
+### Output Example
+
+<img src="Capture d'écran 2025-11-26 093207.png" alt="Frost App Screenshot" width="1814"/>
 
 ## Future Improvements
 - Integration of 2025 forecast data to compare historical averages against current predictions.
