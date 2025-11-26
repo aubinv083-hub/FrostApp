@@ -2,11 +2,9 @@ import pandas as pd
 
 
 def clean_data():
-    print("⏳ Starting data pre-processing...")
 
     # --- PART 1: PREPARE CITIES (df4.csv) ---
     # We need to link City Name -> Department Code
-    print("   ... Processing Cities (df4.csv)")
     df_cities = pd.read_csv('data/df4.csv', dtype={'dep_code': str})
 
     # Select only useful columns and rename them for clarity
@@ -25,7 +23,6 @@ def clean_data():
 
     # --- PART 2: PREPARE CLIMATE HISTORY (df0.csv) ---
     # We calculate the "Percentage of Frost" for every day of the year for each department
-    print("   ... Processing Weather History (df0.csv)")
     df_weather = pd.read_csv('data/df0.csv', dtype={'Code INSEE département': str})
 
     # Rename and clean
